@@ -1,0 +1,165 @@
+/* ===== Google Font Import - Montserrat ===== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Hide Arrows from Input number starts  */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide Arrows from Input number ends  */
+
+body {
+  margin: 0 10px;
+  background-color: #e4f9e1;
+}
+
+.container-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.table-container {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.table-container td a {
+  text-decoration: none;
+  color: #1a1818;
+  cursor: pointer;
+  padding: 5px 8px;
+  background-color: #cfedca;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+th {
+  background-color: #1a1818;
+  color: #fefafa;
+}
+th,
+td {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+tr:nth-child(odd) {
+  background-color: #cfedca;
+}
+tr:hover {
+  background-color: #a7c5a1;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar-wrapper .search-bar {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 40px;
+  margin: 0 0 10px;
+  background-color: #cfedca;
+  margin-right: 5px;
+}
+.search-bar-wrapper #view-data {
+  cursor: pointer;
+  display: none;
+}
+
+/* Media query starts here  */
+@media screen and (max-width: 700px) {
+  .search-bar-wrapper {
+    flex-direction: column;
+  }
+  thead {
+    display: none;
+  }
+  td {
+    display: block;
+    font-size: 1rem;
+  }
+
+  td:first-child {
+    background-color: #1a1818;
+    color: #fefafa;
+    text-align: center;
+  }
+  td:nth-child(2)::before {
+    content: "Child First Name";
+  }
+
+  td:nth-child(3)::before {
+    content: "Child Last Name";
+  }
+  td:nth-child(4)::before {
+    content: "Date of Birth";
+  }
+  td:nth-child(5)::before {
+    content: "Place of Birth";
+  }
+  td:nth-child(6)::before {
+    content: "Gender";
+  }
+  td:nth-child(7)::before {
+    content: "Issue Date";
+  }
+  td:nth-child(8)::before {
+    content: "View";
+  }
+  td:nth-child(9)::before {
+    content: "Edit";
+  }
+  td:nth-child(10)::before {
+    content: "Delete";
+  }
+
+  td {
+    text-align: right;
+  }
+
+  td::before {
+    float: left;
+    margin-right: 4rem;
+    font-weight: bold;
+  }
+
+  .header {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+  .header {
+    font-size: 1rem;
+  }
+  td {
+    font-size: 0.8rem;
+  }
+  th {
+    font-size: 0.9rem;
+  }
+}
